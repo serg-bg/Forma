@@ -15,7 +15,7 @@ Get the two files for your computer from the [latest release](https://github.com
 | Apple silicon Mac | `Forma-mac.zip` and `Forma-mac.zip.sha256` | 157 MB |
 | Windows PC | `Forma-windows.zip` and `Forma-windows.zip.sha256` | 18 MB, plus 0.5 GB on first start |
 
-The `.sha256` file lets you check that the zip arrived intact. On a Mac, run `shasum -a 256 -c Forma-mac.zip.sha256` in Terminal from the download folder. The Windows download is a preview. See [Known limits](#known-limits).
+The `.sha256` file lets you check that the zip arrived intact. On a Mac, run `shasum -a 256 -c Forma-mac.zip.sha256` in Terminal from the download folder.
 
 ## Install on a Mac
 
@@ -68,11 +68,8 @@ Forma keeps one image or a folder of images in a workspace and takes it through 
 
 ## Known limits
 
-- The Windows version is a preview. It has run on one Windows Server machine with an NVIDIA A10G card and on one Windows 11 laptop.
 - Windows limits file paths to 260 characters. Forma says so when a data folder is too deep. Keep data folders short and near the top of a drive. A Windows user name longer than about 26 characters stops the engine's installation, and Forma states the reason.
-- Results differ slightly between an NVIDIA card and a Mac. The card runs the model in mixed precision, the Mac in full precision. On the test image the two disagree on under 0.1% of the labelled voxels.
 - Time series convert and display with their time axis, but segmentation, tracing, and label editing refuse them. Convert a single timepoint for that work.
-- Denoising with CARE is part of the Mac app only.
 - Forma is not notarized by Apple and not signed on Windows, hence the warnings during installation.
 
 ## Feedback
@@ -93,4 +90,4 @@ Bernal-Garcia S, Schlotter AP, Pereira DB, Recupero AJ, Polleux F, Hammond LA. A
 
 ## Author
 
-Sergio Bernal-Garcia
+Sergio Bernal-Garcia, Zuckerman Mind Brain Behavior Institute, Columbia University. Franck Polleux Lab. smb2318@columbia.edu

@@ -5,6 +5,8 @@ type: software
 authors:
   - family-names: Bernal-Garcia
     given-names: Sergio
+    affiliation: Zuckerman Mind Brain Behavior Institute, Columbia University
+    email: smb2318@columbia.edu
 repository-code: https://github.com/serg-bg/Forma
 license: GPL-3.0
 version: 1.0.0
