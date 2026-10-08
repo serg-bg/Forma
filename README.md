@@ -85,7 +85,7 @@ Forma is new and will have rough edges. Report them as [issues](https://github.c
 
 ## License
 
-- The Forma app: [GPL-3.0](LICENSE). Source for the GPL-covered application is available on request for at least three years from each release.
+- The Forma app: [GPL-3.0](LICENSE).
 - The model weights (Dataset226) and the CARE denoising weights in the Mac app: [CC BY-NC 4.0](LICENSE-WEIGHTS), noncommercial use.
 - Third-party components keep their own licenses.
 
