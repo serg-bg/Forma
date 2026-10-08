@@ -83,6 +83,19 @@ On **Segment** you pick the model, the compute device, and the channel. **Check 
 
 ![The Review tab](docs/images/review.png)
 
+### Trace a neuron with Lazy Tracer
+
+![Lazy Tracer in napari, sped up: the plugin opens, two waypoints are placed, the previewed path is accepted, a branch is started, and the trace is exported as SWC](docs/images/lazy-tracer.gif)
+
+1. Open the image in napari from the **Review** tab, then open **Plugins** and choose **Lazy Tracer**.
+2. Pick the image layer to trace. On a multichannel image, pick the channel layer. The panel shows the voxel spacing it read from the file and reports when it is ready to trace.
+3. Click **Enable tracing**, click the first waypoint on the neuron, then click the next one a short way along. The tracer reads only a small full-resolution region around each hop, which is what keeps a large volume fast, so keep the hops short.
+4. Review the previewed path, then click **Accept preview** or **Reject preview**. Keep placing waypoints to extend the trace.
+5. To branch, click **Start branch**, click near an accepted node, then place the next waypoint from there.
+6. **Undo segment** removes the last accepted hop. **Export SWC…** writes the tree with physical coordinates in micrometres. **Show SWC…** draws a saved file over the image for review.
+
+The exported radius is a placeholder of 1 µm, not a measured caliber.
+
 ## Known limits
 
 - Windows limits file paths to 260 characters. Forma says so when a data folder is too deep. Keep data folders short and near the top of a drive.
