@@ -82,7 +82,7 @@
   <ul>
     <li>Converts TIFF, ND2, and CZI stacks to OME-Zarr, the open community standard for large bioimages, and runs every later step on that store.</li>
     <li>Segments in 3D with nnU-Net on the GPU of an Apple silicon Mac, on an NVIDIA card on Windows, or on the processor. Our model or your own, packaged with a short manifest.</li>
-    <li>Measures every segmented object into tables, with the classes and measurements taken from the model that produced the result.</li>
+    <li>Measures every segmented object into tables, with the classes and measurements taken from whichever model produced the result, from whole-cell morphology to organelles.</li>
     <li>Segments images above the model's limit in pieces and continues a stopped job from the last finished piece.</li>
     <li>Opens everything in napari, which it installs for you: raw fluorescence and segmentation streamed from the OME-Zarr pyramid, label corrections saved as new revisions, and neuron tracing with SWC export.</li>
     <li>No Python setup. One version for Mac and Windows.</li>

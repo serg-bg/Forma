@@ -9,7 +9,7 @@ Forma is a desktop app for 3D microscopy analysis on Mac and Windows. You open a
 - **Raw files in, OME-Zarr out.** TIFF, ND2, and CZI stacks, 2D to 5D, are converted once to OME-Zarr, the open community standard for large bioimages. Every later step reads that store.
 - **3D deep-learning segmentation on a Mac.** The nnU-Net engine runs on the GPU of an Apple silicon Mac, on an NVIDIA card on Windows, or on the processor.
 - **Your model or ours.** Model packages are self-describing. Any 3D single-channel nnU-Net model runs in Forma once it is packaged with a short manifest.
-- **Quantification that follows the model.** The Quantify tab fills in the classes and the measurements from the model that produced each result. Nothing about spines, puncta, or mitochondria is built in.
+- **Quantification that follows the model.** The Quantify tab fills in the classes and the measurements from whichever model produced the result, so the same tab quantifies anything a model can segment, from whole-cell morphology to organelles. Nothing about a particular structure is built in.
 - **Large volumes.** An image above the model's limit is segmented in pieces, identical to the whole-image result on the test data, and a stopped job continues from the last finished piece when you run it again.
 - **napari, bundled.** Forma installs napari and its plugins for you and streams the raw fluorescence and the segmentation from the OME-Zarr pyramid, so a large volume opens without loading it whole.
 - **Corrections kept.** Edited labels are saved as a new revision beside the original. A segmentation result is never overwritten.
