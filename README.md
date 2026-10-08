@@ -2,7 +2,7 @@
 
 Forma is a desktop app for 3D microscopy analysis on Mac and Windows. You open a stack or a folder of stacks, convert it to OME-Zarr, segment it with a deep-learning model, measure the segmented objects, and review or correct the result in napari. No Python setup is needed. The app installs its own analysis tools the first time you ask.
 
-![The Home tab: open one image or a folder workspace, or drop a file on the window](docs/images/home.png)
+![A segmented neuron in napari: dendrite, spines, soma, and axon rendered in 3D over the raw stack, with the Forma Dataset Browser panel beside it](docs/images/napari.png)
 
 ## Highlights
 
@@ -65,11 +65,15 @@ Forma keeps one image or a folder of images in a workspace and takes it through 
 
 **Home** opens one image, an existing OME-Zarr, or a folder workspace, and resumes a recent one.
 
+![The Home tab](docs/images/home.png)
+
 **Prepare** lists the images it found. **Convert selected cases** converts the checked ones to multiscale OME-Zarr. It reads the voxel spacing from the file. When the file has none, you type it in.
 
 ![The Prepare tab](docs/images/prepare.png)
 
 On **Segment** you pick the model, the compute device, and the channel. **Check selected data** checks the images against the model, and **Run checked batch** segments them one at a time. An image above the model's size limit runs in pieces, with the time left shown as it runs. On the test image the piecewise result was identical to the whole-image result.
+
+![The Segment tab](docs/images/segment.png)
 
 **Quantify** measures every object in the segmented images into one table per image and a summary table that grows with every image. The class names come from the model.
 
