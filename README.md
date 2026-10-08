@@ -1,6 +1,6 @@
 # Forma
 
-Forma is a desktop app for 3D microscopy analysis on Mac and Windows. You open a stack or a folder of stacks, convert it to OME-Zarr, segment it with a deep-learning model, measure the segmented objects, and review or correct the result in napari. No Python setup is needed. The app installs its own analysis tools the first time you ask.
+Forma is a desktop app for 3D microscopy analysis on Mac and Windows, with GPU acceleration on Apple silicon and on NVIDIA cards. You open a stack or a folder of stacks, convert it to OME-Zarr, segment it with a deep-learning model, measure the segmented objects, and review or correct the result in napari. No Python setup is needed. The app installs its own analysis tools the first time you ask.
 
 ![A segmented neuron in napari: dendrite, spines, soma, and axon rendered in 3D over the raw stack, with the Forma Dataset Browser panel beside it](docs/images/napari.png)
 
