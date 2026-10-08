@@ -66,10 +66,6 @@ Forma keeps one image or a folder of images in a workspace and takes it through 
 
 ![The Review tab](docs/images/review.png)
 
-## What Forma sends
-
-Forma uses the internet in three places. The analysis-tools installer fetches Python packages from the Python package index and the PyTorch index. Every model request carries the app version, the operating system, and an anonymous id for your installation. Each model download also carries the name, email, and institution you entered once. The authors see these records and use them to know who uses the models, which are licensed for noncommercial use. Nothing else leaves your computer. Your images and results stay where you put them.
-
 ## Known limits
 
 - The Windows version is a preview. It has run on one Windows Server machine with an NVIDIA A10G card and on one Windows 11 laptop.
