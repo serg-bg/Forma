@@ -6,7 +6,7 @@ body:
     id: version
     attributes:
       label: Forma version
-      description: Shown under About Forma in the app menu.
+      description: Shown under About Forma in the menu bar.
       placeholder: "1.0.0"
     validations:
       required: true
@@ -29,7 +29,7 @@ body:
     id: happened
     attributes:
       label: What happened
-      description: The exact message Forma showed, or what you expected instead.
+      description: The exact message Forma showed, and what you expected instead. Drag a screenshot in here if you can share one.
     validations:
       required: true
   - type: textarea
@@ -37,10 +37,7 @@ body:
     attributes:
       label: Log
       description: >-
-        On Windows, paste the end of C:\Users\<your user name>\AppData\Local\FORMA-Bioimage\FORMA-Bioimage.log.
+        On Windows, paste %LOCALAPPDATA%\FORMA-Bioimage into the File Explorer address bar (that folder name is correct) and paste the end of FORMA-Bioimage.log.
         On a Mac, paste the text of the Detailed log on the tab that failed.
         Remove folder names you consider confidential. Do not upload microscopy data or model files.
       render: text
-  - type: markdown
-    attributes:
-      value: A screenshot helps when you can share one. Drag it into the box above.
