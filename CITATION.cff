@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: If Forma contributes to your work, please cite it as below.
+title: Forma
+type: software
+authors:
+  - family-names: Bernal-Garcia
+    given-names: Sergio
+repository-code: https://github.com/serg-bg/Forma
+license: GPL-3.0
+version: 1.0.0
+date-released: "2026-10-08"
+abstract: >-
+  A desktop application for 3D microscopy analysis on Mac and Windows:
+  conversion to OME-Zarr, deep-learning segmentation, per-object
+  quantification, and review in napari.
+references:
+  - type: article
+    title: A deep learning pipeline for accurate and automated restoration, segmentation, and quantification of dendritic spines
+    authors:
+      - family-names: Bernal-Garcia
+        given-names: Sergio
+      - family-names: Schlotter
+        given-names: Alexa P.
+      - family-names: Pereira
+        given-names: Daniela B.
+      - family-names: Recupero
+        given-names: Aleksandra J.
+      - family-names: Polleux
+        given-names: Franck
+      - family-names: Hammond
+        given-names: Luke A.
+    journal: Cell Reports Methods
+    year: 2025
+    volume: 5
+    issue: 10
+    start: 101179
+    doi: 10.1016/j.crmeth.2025.101179

@@ -1,0 +1,67 @@
+MODEL WEIGHTS LICENSE
+=====================
+
+This file covers the trained model weights distributed with this application —
+the CAREamics/PyTorch checkpoint files (`*.ckpt`) and their accompanying
+configuration and normalization sidecars (`*.config.json`, `*.scales.json`)
+bundled under `Contents/Resources/napari-care-denoise/models/`.
+
+It does NOT cover the application source code, which is licensed separately
+under the GNU General Public License v3.0 — see the `LICENSE` file.
+
+
+Copyright (c) 2026 Sergio Bernal-Garcia, Columbia University.
+
+The model weights are licensed under the Creative Commons
+Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0).
+
+  Summary (human-readable deed):
+    https://creativecommons.org/licenses/by-nc/4.0/
+
+  Full legal code:
+    https://creativecommons.org/licenses/by-nc/4.0/legalcode
+
+
+WHAT YOU MAY DO
+---------------
+
+  - Use the weights for academic, research, educational, and personal purposes.
+  - Share and redistribute the weights in any medium or format.
+  - Adapt, remix, fine-tune, and build upon the weights.
+
+  ...provided you give appropriate credit, link to the license, and indicate
+  whether changes were made.
+
+
+WHAT YOU MAY NOT DO
+-------------------
+
+  - Use the weights for commercial purposes. Under CC BY-NC 4.0, a commercial
+    purpose is one "primarily intended for or directed toward commercial
+    advantage or monetary compensation."
+
+  If you want to use these weights commercially, contact the author.
+
+
+ATTRIBUTION
+-----------
+
+  Sergio Bernal-Garcia, Columbia University (2026).
+  CARE 3D denoising model for OME-Zarr microscopy volumes.
+  Licensed under CC BY-NC 4.0.
+
+
+A NOTE ON SCOPE
+---------------
+
+Creative Commons licenses were designed for creative and documentary works, not
+for machine-learning model weights, and CC itself notes they are an imperfect
+fit for this purpose. ML-specific licenses (RAIL / OpenRAIL) exist and impose
+use-based restrictions that CC does not. CC BY-NC 4.0 is used here as a
+deliberate choice for its clarity and familiarity in an academic context; it
+should be read as expressing intent about non-commercial use, and it does not
+restrict redistribution.
+
+These weights are currently unpublished. Please keep them within the lab until
+they are formally released. That is a request from the author, not a term of
+this license.

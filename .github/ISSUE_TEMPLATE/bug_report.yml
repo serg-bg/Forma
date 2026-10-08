@@ -1,0 +1,46 @@
+name: Bug report or feedback
+description: Something failed, or something should work differently.
+labels: []
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Forma version
+      description: Shown under About Forma in the app menu.
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: input
+    id: computer
+    attributes:
+      label: Your computer
+      description: Mac model and macOS version, or Windows version and graphics card.
+      placeholder: "MacBook Pro M2, macOS 15.7"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: What you did
+      description: The tab and the button, in order, and what the input was (TIFF, ND2, CZI, or OME-Zarr).
+    validations:
+      required: true
+  - type: textarea
+    id: happened
+    attributes:
+      label: What happened
+      description: The exact message Forma showed, or what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Log
+      description: >-
+        On Windows, paste the end of C:\Users\<your user name>\AppData\Local\FORMA-Bioimage\FORMA-Bioimage.log.
+        On a Mac, paste the text of the Detailed log on the tab that failed.
+        Remove folder names you consider confidential. Do not upload microscopy data or model files.
+      render: text
+  - type: markdown
+    attributes:
+      value: A screenshot helps when you can share one. Drag it into the box above.

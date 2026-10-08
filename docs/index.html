@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forma</title>
+<meta name="description" content="Forma: a desktop app for 3D microscopy analysis on Mac and Windows.">
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1d1d1f;
+    --muted: #5c5c61;
+    --accent: #2f6fed;
+    --accent-fg: #ffffff;
+    --border: #d9d9de;
+    --card: #f5f5f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141416;
+      --fg: #f2f2f4;
+      --muted: #a4a4ad;
+      --accent: #5b8df5;
+      --accent-fg: #0d1526;
+      --border: #333339;
+      --card: #1f1f23;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141416;
+    --fg: #f2f2f4;
+    --muted: #a4a4ad;
+    --accent: #5b8df5;
+    --accent-fg: #0d1526;
+    --border: #333339;
+    --card: #1f1f23;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 860px; margin: 0 auto; padding: 48px 16px 64px; }
+  h1 { font-size: 44px; margin: 0 0 8px; letter-spacing: -0.02em; }
+  .lead { font-size: 21px; color: var(--muted); margin: 0 0 28px; }
+  .buttons { display: flex; flex-wrap: wrap; gap: 12px; margin: 0 0 12px; }
+  .button {
+    display: inline-block; padding: 12px 20px; border-radius: 10px;
+    background: var(--accent); color: var(--accent-fg); text-decoration: none; font-weight: 600;
+  }
+  .button.secondary { background: var(--card); color: var(--fg); border: 1px solid var(--border); }
+  .note { color: var(--muted); font-size: 15px; margin: 0 0 36px; }
+  figure { margin: 0 0 32px; }
+  figure img { width: 100%; height: auto; border: 1px solid var(--border); border-radius: 10px; display: block; }
+  figcaption { color: var(--muted); font-size: 15px; margin-top: 8px; }
+  h2 { font-size: 24px; margin: 36px 0 10px; }
+  p { margin: 0 0 14px; }
+  ul { padding-left: 22px; margin: 0 0 14px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); }
+  footer { color: var(--muted); font-size: 14px; margin-top: 48px; border-top: 1px solid var(--border); padding-top: 16px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Forma</h1>
+  <p class="lead">3D microscopy analysis on a Mac or a Windows PC: convert, segment, measure, review.</p>
+  <div class="buttons">
+    <a class="button" href="https://github.com/serg-bg/Forma/releases/latest">Download for Mac or Windows</a>
+    <a class="button secondary" href="https://github.com/serg-bg/Forma#readme">Install guide and details</a>
+  </div>
+  <p class="note">Apple silicon Macs and Windows PCs with an NVIDIA card. The Windows version is a preview.</p>
+
+  <figure>
+    <img src="images/home.png" alt="The Forma window on the Home tab, with buttons to open one image or a folder workspace and an area to drop a file">
+    <figcaption>Open one stack or a whole folder. Forma keeps the conversion, segmentation, and measurements together in one workspace.</figcaption>
+  </figure>
+
+  <h2>What it does</h2>
+  <p>Forma converts TIFF, ND2, and CZI stacks to OME-Zarr, segments them with a deep-learning model, measures every segmented object into tables, and opens the result in napari for review, label correction, and neuron tracing. Segmentation runs on the GPU of an Apple silicon Mac or on an NVIDIA card on Windows. An image larger than memory is segmented in pieces, and a stopped run continues where it left off.</p>
+  <p>No Python setup is needed. The app installs its own analysis tools the first time you ask, and downloads the segmentation model once.</p>
+
+  <figure>
+    <img src="images/quantify.png" alt="The Forma window on the Quantify tab, where segmented images are measured into tables">
+    <figcaption>Quantify writes one table per image and a running summary. The class names come from the model.</figcaption>
+  </figure>
+
+  <h2>Before you download</h2>
+  <ul>
+    <li>Forma is not notarized by Apple and not signed on Windows. The <a href="https://github.com/serg-bg/Forma#install-on-a-mac">install guide</a> shows the one extra step each system asks for.</li>
+    <li>The analysis tools take about 2 GB and the model 1.1 GB, downloaded once.</li>
+    <li>The app is free for noncommercial use. The app code is GPL-3.0 and the model weights are CC BY-NC 4.0.</li>
+  </ul>
+
+  <h2>Feedback</h2>
+  <p>Forma is new. If something fails or should work differently, <a href="https://github.com/serg-bg/Forma/issues">open an issue</a>.</p>
+
+  <footer>Forma by Sergio Bernal-Garcia. Model: Bernal-Garcia et al., Cell Reports Methods 2025, <a href="https://doi.org/10.1016/j.crmeth.2025.101179">doi:10.1016/j.crmeth.2025.101179</a>.</footer>
+</main>
+</body>
+</html>
