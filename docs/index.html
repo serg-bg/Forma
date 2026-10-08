@@ -79,8 +79,14 @@
   </figure>
 
   <h2>What it does</h2>
-  <p>Forma converts TIFF, ND2, and CZI stacks to OME-Zarr, segments them with a deep-learning model, measures every segmented object into tables, and opens the result in napari for review, label correction, and neuron tracing. Segmentation runs on the GPU of an Apple silicon Mac or on an NVIDIA card on Windows. An image larger than memory is segmented in pieces, and a stopped run continues where it left off.</p>
-  <p>No Python setup is needed. The app installs its own analysis tools the first time you ask, and downloads the segmentation model once.</p>
+  <ul>
+    <li>Converts TIFF, ND2, and CZI stacks to OME-Zarr, the open community standard for large bioimages, and runs every later step on that store.</li>
+    <li>Segments in 3D with nnU-Net on the GPU of an Apple silicon Mac, on an NVIDIA card on Windows, or on the processor. Our model or your own, packaged with a short manifest.</li>
+    <li>Measures every segmented object into tables, with the classes and measurements taken from the model that produced the result.</li>
+    <li>Segments images above the model's limit in pieces and continues a stopped job from the last finished piece.</li>
+    <li>Opens everything in napari, which it installs for you: raw fluorescence and segmentation streamed from the OME-Zarr pyramid, label corrections saved as new revisions, and neuron tracing with SWC export.</li>
+    <li>No Python setup. One version for Mac and Windows.</li>
+  </ul>
 
   <figure>
     <img src="images/quantify.png" alt="The Forma window on the Quantify tab, where segmented images are measured into tables">
