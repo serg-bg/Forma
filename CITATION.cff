@@ -9,8 +9,8 @@ authors:
     email: smb2318@columbia.edu
 repository-code: https://github.com/serg-bg/Forma
 license: GPL-3.0
-version: 1.0.0
-date-released: "2026-10-08"
+version: 1.1.0
+date-released: "2026-10-24"
 abstract: >-
   A desktop application for 3D microscopy analysis on Mac and Windows:
   conversion to OME-Zarr, deep-learning segmentation, per-object
