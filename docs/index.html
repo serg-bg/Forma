@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Forma</title>
-<meta name="description" content="Forma: a desktop app for 3D microscopy analysis on Mac and Windows.">
+<meta name="description" content="Forma: a desktop app for 3D microscopy analysis on Mac, Windows, and Linux.">
 <style>
   :root {
     --bg: #ffffff;
@@ -66,12 +66,12 @@
 <body>
 <main>
   <h1>Forma</h1>
-  <p class="lead">3D microscopy analysis on a Mac or a Windows PC, GPU-accelerated on Apple silicon and NVIDIA cards: convert, segment, measure, review.</p>
+  <p class="lead">3D microscopy analysis on a Mac, a Windows PC, or a Linux PC, GPU-accelerated on Apple silicon and NVIDIA cards: convert, segment, measure, review.</p>
   <div class="buttons">
-    <a class="button" href="https://github.com/serg-bg/Forma/releases/latest">Download for Mac or Windows</a>
+    <a class="button" href="https://github.com/serg-bg/Forma/releases/latest">Download for Mac, Windows, or Linux</a>
     <a class="button secondary" href="https://github.com/serg-bg/Forma#readme">Install guide and details</a>
   </div>
-  <p class="note">Apple silicon Macs and Windows PCs with an NVIDIA card.</p>
+  <p class="note">Apple silicon Macs, and Windows or Linux PCs with an NVIDIA card.</p>
 
   <figure>
     <img src="images/napari.png" alt="A segmented neuron in napari: dendrite, spines, soma, and axon rendered in 3D over the raw stack, with the Forma Dataset Browser panel beside it">
@@ -81,11 +81,11 @@
   <h2>What it does</h2>
   <ul>
     <li>Converts TIFF, ND2, and CZI stacks to OME-Zarr, the open community standard for large bioimages, and runs every later step on that store.</li>
-    <li>Segments in 3D with nnU-Net on the GPU of an Apple silicon Mac, on an NVIDIA card on Windows, or on the processor. Our model or your own, packaged with a short manifest.</li>
+    <li>Segments in 3D with nnU-Net on the GPU of an Apple silicon Mac, on an NVIDIA card on Windows or Linux, or on the processor. Our model or your own, packaged with a short manifest.</li>
     <li>Measures every segmented object into tables, with the classes and measurements taken from whichever model produced the result, from whole-cell morphology to organelles.</li>
     <li>Segments images above the model's limit in pieces and continues a stopped job from the last finished piece.</li>
     <li>Opens everything in napari, which it installs for you: raw fluorescence and segmentation streamed from the OME-Zarr pyramid, label corrections saved as new revisions, and neuron tracing with SWC export.</li>
-    <li>No Python setup. One version for Mac and Windows.</li>
+    <li>No Python setup. One version for Mac, Windows, and Linux.</li>
   </ul>
 
   <figure>

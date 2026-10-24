@@ -1,13 +1,13 @@
 # Forma
 
-Forma is a desktop app for 3D microscopy analysis on Mac and Windows, with GPU acceleration on Apple silicon and on NVIDIA cards. You open a stack or a folder of stacks, convert it to OME-Zarr, segment it with a deep-learning model, measure the segmented objects, and review or correct the result in napari. No Python setup is needed. The app installs its own analysis tools the first time you ask.
+Forma is a desktop app for 3D microscopy analysis on Mac, Windows, and Linux, with GPU acceleration on Apple silicon and on NVIDIA cards. You open a stack or a folder of stacks, convert it to OME-Zarr, segment it with a deep-learning model, measure the segmented objects, and review or correct the result in napari. No Python setup is needed. The app installs its own analysis tools the first time you ask.
 
 ![A segmented neuron in napari: dendrite, spines, soma, and axon rendered in 3D over the raw stack, with the Forma Dataset Browser panel beside it](docs/images/napari.png)
 
 ## Highlights
 
 - **Raw files in, OME-Zarr out.** TIFF, ND2, and CZI stacks, 2D to 5D, are converted once to OME-Zarr, the open community standard for large bioimages. Every later step reads that store.
-- **3D deep-learning segmentation on a Mac.** The nnU-Net engine runs on the GPU of an Apple silicon Mac, on an NVIDIA card on Windows, or on the processor.
+- **3D deep-learning segmentation on a Mac.** The nnU-Net engine runs on the GPU of an Apple silicon Mac, on an NVIDIA card on Windows or Linux, or on the processor.
 - **Your model or ours.** Model packages are self-describing. Any 3D single-channel nnU-Net model runs in Forma once it is packaged with a short manifest.
 - **Quantification that follows the model.** The Quantify tab fills in the classes and the measurements from whichever model produced the result, so the same tab quantifies anything a model can segment, from whole-cell morphology to organelles. Nothing about a particular structure is built in.
 - **Large volumes.** An image above the model's limit is segmented in pieces, identical to the whole-image result on the test data, and a stopped job continues from the last finished piece when you run it again.
@@ -15,7 +15,7 @@ Forma is a desktop app for 3D microscopy analysis on Mac and Windows, with GPU a
 - **Corrections kept.** Edited labels are saved as a new revision beside the original. A segmentation result is never overwritten.
 - **Lazy Tracer.** Trace a neuron through a large volume in napari and export the path as an SWC file for downstream tools.
 - **A workspace, not loose files.** One image or a whole folder. Everything Forma writes lands in a `Forma Outputs` folder next to your images, tied to each image by stored provenance, not by file names.
-- **One version for Mac and Windows.** The same app and the same engine on both, with no Python setup.
+- **One version for Mac, Windows, and Linux.** The same app and the same engine on all three, with no Python setup.
 
 ## Download
 
@@ -25,10 +25,11 @@ Get the two files for your computer from the [latest release](https://github.com
 |---|---|---|
 | Apple silicon Mac | `Forma-mac.zip` and `Forma-mac.zip.sha256` | 157 MB |
 | Windows PC | `Forma-windows.zip` and `Forma-windows.zip.sha256` | 18 MB, plus 0.5 GB on first start |
+| Linux PC (x86-64) | `Forma-linux.tar.gz` and `Forma-linux.tar.gz.sha256` | 20 MB, plus 0.5 GB on first start |
 
 Plan for about 4 GB of disk in all: the app, about 2 GB of analysis tools, and the 1.1 GB model.
 
-The `.sha256` file lets you check that the zip arrived intact. The check is optional. On a Mac, paste `cd ~/Downloads && shasum -a 256 -c Forma-mac.zip.sha256` into Terminal; it prints `Forma-mac.zip: OK`. On Windows, run `Get-FileHash $HOME\Downloads\Forma-windows.zip` in PowerShell and compare the hash with the one in the `.sha256` file.
+The `.sha256` file lets you check that the zip arrived intact. The check is optional. On a Mac, paste `cd ~/Downloads && shasum -a 256 -c Forma-mac.zip.sha256` into Terminal; it prints `Forma-mac.zip: OK`. On Windows, run `Get-FileHash $HOME\Downloads\Forma-windows.zip` in PowerShell and compare the hash with the one in the `.sha256` file. On Linux, `cd ~/Downloads && sha256sum -c Forma-linux.tar.gz.sha256` prints `Forma-linux.tar.gz: OK`.
 
 ## Install on a Mac
 
@@ -47,6 +48,15 @@ For GPU segmentation, Windows needs an NVIDIA card of the GTX 16 or RTX 20 serie
 2. Forma refuses to start from a folder that mixes two versions, so extract into a new folder, never over the folder of an earlier version: right-click the zip, choose **Extract All…**, pick the new folder, then **Extract**.
 3. Open the extracted `Forma` folder and double-click `Forma` (type "Windows Command Script"). The download is not signed, so Windows may warn that the file comes from the internet. If the warning has a **Run** button, click it. If it shows only **More info**, click that, then **Run anyway**.
 4. The first start downloads about 0.5 GB and takes a few minutes. A black window shows the progress and closes by itself once the app opens. Later starts open the app directly.
+
+## Install on Linux
+
+Forma runs on x86-64 Linux PCs. For GPU segmentation it needs an NVIDIA card of the GTX 16 or RTX 20 series or newer, with driver 580 or later; without one, Forma segments on the processor. It was built and tested on Ubuntu 26.04.
+
+1. Download `Forma-linux.tar.gz`.
+2. Extract it into a new folder, never over the folder of an earlier version: in a terminal, `cd ~/Downloads && tar -xzf Forma-linux.tar.gz`. This makes a `Forma` folder; move it to where you want the app to live.
+3. Start it from a terminal: `./Forma/Forma.sh`. The first start downloads about 0.5 GB and takes a few minutes, with the progress in the terminal, and adds Forma to the applications menu. Later starts can come from the menu or from `Forma.sh` again.
+4. If the window does not open, the terminal names the system libraries that are missing and, on Ubuntu and Debian, the `sudo apt install` line that adds them.
 
 ## Set up the analysis tools and a model
 
@@ -101,6 +111,7 @@ The exported radius is a placeholder of 1 µm, not a measured caliber.
 - Windows limits file paths to 260 characters. Forma says so when a data folder is too deep. Keep data folders short and near the top of a drive.
 - Time series convert and display with their time axis, but segmentation, tracing, and label editing refuse them. Convert a single timepoint for that work.
 - Forma is not notarized by Apple and not signed on Windows, hence the warnings during installation.
+- On Linux, CARE Denoise is not available; it is part of the Mac app only. The Linux app has been tested on an X11 desktop session; Wayland sessions have not been tested.
 
 ## Feedback
 
