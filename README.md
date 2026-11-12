@@ -89,7 +89,7 @@ On **Segment** you pick the model, the compute device, and the channel. **Check 
 
 ![The Quantify tab](docs/images/quantify.png)
 
-**Review** opens the workspace, one result, or any OME-Zarr in napari. There, the Forma plugins page through the images of a workspace, edit labels and save them as a new revision beside the original, trace a neuron and export the path as SWC, and, on a Mac, denoise with CARE.
+**Review** opens the workspace, one result, or any OME-Zarr in napari. There, the Forma plugins page through the images of a workspace, edit labels and save them as a new revision beside the original, and trace a neuron and export the path as SWC.
 
 ![The Review tab](docs/images/review.png)
 
