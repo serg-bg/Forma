@@ -1,13 +1,13 @@
 MODEL WEIGHTS LICENSE
 =====================
 
-This file covers the trained model weights distributed with this application —
-the CAREamics/PyTorch checkpoint files (`*.ckpt`) and their accompanying
-configuration and normalization sidecars (`*.config.json`, `*.scales.json`)
-bundled under `Contents/Resources/napari-care-denoise/models/`.
+This file covers the trained model weights that Forma offers in its Model list
+and downloads onto your computer when you pick one — the nnU-Net checkpoint
+files (`*.pth`) and the accompanying plan, dataset and manifest files of each
+model package, such as Dataset226 neuronal morphology Global V6.
 
-It does NOT cover the application source code, which is licensed separately
-under the GNU General Public License v3.0 — see the `LICENSE` file.
+It does NOT cover the application itself, which is licensed separately under
+the GNU General Public License v3.0 — see the `LICENSE` file.
 
 
 Copyright (c) 2026 Sergio Bernal-Garcia, Columbia University.
@@ -47,7 +47,9 @@ ATTRIBUTION
 -----------
 
   Sergio Bernal-Garcia, Columbia University (2026).
-  CARE 3D denoising model for OME-Zarr microscopy volumes.
+  Dataset226 neuronal morphology Global V6, the nnU-Net model distributed
+  with RESPAN (Bernal-Garcia et al., Cell Reports Methods 2025,
+  https://doi.org/10.1016/j.crmeth.2025.101179) and through Forma.
   Licensed under CC BY-NC 4.0.
 
 
@@ -61,7 +63,3 @@ use-based restrictions that CC does not. CC BY-NC 4.0 is used here as a
 deliberate choice for its clarity and familiarity in an academic context; it
 should be read as expressing intent about non-commercial use, and it does not
 restrict redistribution.
-
-These weights are currently unpublished. Please keep them within the lab until
-they are formally released. That is a request from the author, not a term of
-this license.
